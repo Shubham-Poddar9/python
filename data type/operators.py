@@ -1,0 +1,8 @@
+print(5==6)
+print(12>=-12)
+print(8!=5)
+print(6<=7)
+print(5%3)
+print(6/2)
+print(15//2)
+print(12**2)
