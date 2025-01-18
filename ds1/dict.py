@@ -1,0 +1,12 @@
+a={"name":"shubham","age":14}
+print(a)
+print(a["name"])
+print(a.get("age"))
+a["age"]=15
+print(a)
+a["address"]="Kathmandu,nepal"
+print(a)
+a.pop("age")
+print(a)
+a.clear()
+print(a)
