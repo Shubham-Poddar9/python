@@ -1,0 +1,9 @@
+a={1,3,55,55,55,8,9,0,9}
+print(a)
+print(len(a))
+print(type(a))
+a.add(6)
+print(a)
+b={2,3,6,7,33,33}
+print(a.difference(b))
+print(a.symmetric_difference(b))
