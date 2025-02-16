@@ -1,0 +1,13 @@
+from tkinter import *
+window=Tk()
+window.title("coding")
+window.geometry("400x400")
+a=Label(text="My name is shubham",fg="black",bg="green")
+a.pack()
+b=Button(text="Name",fg="yellow",bg="blue")
+b.pack()
+c=Entry(fg="sky blue",bg="brown")
+c.pack()
+d=Text(fg="green",bg="yellow")
+d.pack()
+window.mainloop()
