@@ -1,21 +1,22 @@
 import tkinter as tk
+import random
+import string
+
+def generate_password():
+    length = int(entry_length.get())  # Get password length from input field
+    characters = string.ascii_letters + string.digits + string.punctuation
+    password = ''.join(random.choice(characters) for _ in range(length))
+    label_result.config(text=f"Generated Password: {password}")
 
 root = tk.Tk()
-root.title("Tkinter Grid Layout")
-label_name = tk.Label(root, text="Name:")
-label_age = tk.Label(root, text="Age:")
-label_email = tk.Label(root, text="Email:")
-entry_name = tk.Entry(root)
-entry_age = tk.Entry(root)
-entry_email = tk.Entry(root)
-button_submit = tk.Button(root, text="Submit")
-button_reset = tk.Button(root, text="Reset")
-label_name.grid(row=0, column=0, padx=10, pady=10, sticky="w")
-entry_name.grid(row=0, column=1, padx=10, pady=10)
-label_age.grid(row=1, column=0, padx=10, pady=10, sticky="w")
-entry_age.grid(row=1, column=1, padx=10, pady=10)
-label_email.grid(row=2, column=0, padx=10, pady=10, sticky="w")
-entry_email.grid(row=2, column=1, padx=10, pady=10)
-button_submit.grid(row=3, column=0, columnspan=2, pady=10, sticky="ew")
-button_reset.grid(row=4, column=0, columnspan=2, pady=10, sticky="ew")
+root.title("Random Password Generator")
+label_instructions = tk.Label(root, text="Enter password length:")
+label_instructions.grid(row=0, column=0, padx=10, pady=10, sticky="w")
+entry_length = tk.Entry(root)
+entry_length.grid(row=0, column=1, padx=10, pady=10)
+button_generate = tk.Button(root, text="Generate Password", command=generate_password)
+button_generate.grid(row=1, column=0, columnspan=2, pady=20)
+label_result = tk.Label(root, text="Generated Password: ")
+label_result.grid(row=2, column=0, columnspan=2, padx=10, pady=10)
+
 root.mainloop()
