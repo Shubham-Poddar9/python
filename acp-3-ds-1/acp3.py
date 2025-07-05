@@ -12,3 +12,4 @@ def myfunction2(n):
         return
     print("Codingal")
     myfunction2(n - 1)
+#O(n is the recursive time complexcity of the function)
